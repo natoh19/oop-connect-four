@@ -11,10 +11,24 @@ export class Column {
                 return this.column
             }
 
-            if (this.column.length -1 === index) {
+            if (this.column.length - 1 === index) {
                 this.column[index] = playerNumber
                 return this.column
             }
         }
+    }
+
+    getTokenAt(rowNum) {
+        // return this.column[rowNum];
+        if(this.column[rowNum] === null) {
+            return null
+        }
+        else if(this.column[rowNum] === 1) {
+            return 1
+        }
+        else {
+            return 2
+        }
+
     }
 }
