@@ -10,6 +10,7 @@ let updateUI = function() {
     else {
         boardHolderDiv.classList.remove("is-invisible");
         gameNameDiv.innerHTML = game.getName()
+        let currentPlayer= game.currentPlayer
     }
 }
 
@@ -35,4 +36,9 @@ window.addEventListener("DOMContentLoaded", () => {
         updateUI();
     })
 
+    let clickTargetsDiv = document.querySelector('#click-targets')
+    clickTargetsDiv.addEventListener('click', () => {
+    game.playInColumn()
+    updateUI()
+})
 })
