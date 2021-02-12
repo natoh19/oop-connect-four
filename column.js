@@ -7,12 +7,12 @@ export class Column {
         for (let index = 0; index < this.column.length; index++) {
             const element = this.column[index];
             if (element) {
-                this.column[index - 1] = playerNumber
+                this.column[index - 1] = playerNumber;
                 break;
             }
 
             if (this.column.length - 1 === index) {
-                this.column[index] = playerNumber
+                this.column[index] = playerNumber;
                 break;
             }
         }
@@ -30,5 +30,11 @@ export class Column {
             return 2
         }
 
+    }
+
+    isFull() {
+        if(this.columns[0]) {
+            return true
+        }
     }
 }
