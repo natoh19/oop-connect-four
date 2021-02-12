@@ -47,8 +47,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     clickTargetsDiv.addEventListener('click', event => {
         let columnIndex = event.target.id
+        let index = columnIndex[7]
 
-    game.playInColumn();
+    game.playInColumn(index);
     updateUI();
     })
 })
