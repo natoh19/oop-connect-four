@@ -7,7 +7,7 @@ export class Game {
         this.currentPlayer = 1
         this.columns = []
         for(let i = 0; i < 7; i++) {
-            this.column.push(new Column());
+            this.columns.push(new Column());
         }
     }
 
@@ -16,11 +16,16 @@ export class Game {
         return `${this.player1} vs. ${this.player2}`
     }
 
-    playInColumn() {
+    playInColumn(index) {
+        this.columns[index].add(this.currentPlayer)
         if (this.currentPlayer === 1) {
             this.currentPlayer = 2
         } else {
             this.currentPlayer = 1
         }
+    }
+
+    getTokenAt(rowIndex, colIndex) {
+        return this.columns[colIndex].getTokenAt(rowIndex)
     }
 }

@@ -21,7 +21,6 @@ let updateUI = function() {
         }
     }
 
-
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -46,7 +45,9 @@ window.addEventListener("DOMContentLoaded", () => {
         updateUI();
     })
 
-    clickTargetsDiv.addEventListener('click', () => {
+    clickTargetsDiv.addEventListener('click', event => {
+        let columnIndex = event.target.id
+
     game.playInColumn();
     updateUI();
     })

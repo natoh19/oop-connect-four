@@ -8,12 +8,12 @@ export class Column {
             const element = this.column[index];
             if (element) {
                 this.column[index - 1] = playerNumber
-                return this.column
+                break;
             }
 
             if (this.column.length - 1 === index) {
                 this.column[index] = playerNumber
-                return this.column
+                break;
             }
         }
     }
