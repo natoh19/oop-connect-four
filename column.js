@@ -33,7 +33,7 @@ export class Column {
     }
 
     isFull() {
-        if(this.columns[0]) {
+        if(this.column[0]) {
             return true
         }
     }

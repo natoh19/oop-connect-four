@@ -34,15 +34,19 @@ let updateUI = function() {
                         div.classList.add('black')
                     } else {
                         div.classList.add('red')
-
                     }
                     element.appendChild(div)
                 }
-
             }
-
         }
-
+        for (let index = 0; index < 7; index++) {
+           let columnDiv = document.getElementById(`column-${index}`)
+           if (game.isColumnFull(index)) {
+               columnDiv.classList.add('full')
+           } else {
+               columnDiv.classList.remove('full')
+           }
+        }
     }
 
 }
